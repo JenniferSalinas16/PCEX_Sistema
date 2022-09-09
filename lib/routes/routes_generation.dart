@@ -33,5 +33,8 @@ class RouteGenerator {
   }
 }
 
+<<<<<<< HEAD
 //xd
+=======
+>>>>>>> af74702ba7311aced78b03c03d2253331e90bb73
 //
