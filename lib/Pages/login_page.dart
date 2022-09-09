@@ -13,17 +13,17 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-bool isAPIcallProcess = false;
-bool hidePassword = true;
-GlobalKey<FormState> globalFormKey = GlobalKey<FormState>();
-String? username;
-String? password;
+  bool isAPIcallProcess = false;
+  bool hidePassword = true;
+  GlobalKey<FormState> globalFormKey = GlobalKey<FormState>();
+  String? username;
+  String? password;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: HexColor("#000000"),
+        backgroundColor: Colors.black,
         body: ProgressHUD(
           child: Form(
             key: globalFormKey,
@@ -37,7 +37,7 @@ String? password;
     );
   }
 
-  Widget _loginUI(BuildContext context){
+  Widget _loginUI(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -50,10 +50,7 @@ String? password;
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [
-                  Colors.white,
-                  Colors.white
-                ],
+                colors: [Colors.white, Colors.white],
               ),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(100),
@@ -65,14 +62,13 @@ String? password;
               children: [
                 Align(
                   alignment: Alignment.center,
-                  child: Image.asset("imagenes/logo1_Png.png"
-                  ),
+                  child: Image.asset("imagenes/logo1_Png.png"),
                 )
               ],
             ),
           )
         ],
-        ),
-      );
+      ),
+    );
   }
 }
